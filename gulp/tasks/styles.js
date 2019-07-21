@@ -3,7 +3,8 @@ postcss = require('gulp-postcss'),
 autoprefixer = require('autoprefixer'), 
 cssvars = require('postcss-simple-vars'),
 nested = require('postcss-nested'), 
-cssImport = require('postcss-import');
+cssImport = require('postcss-import'), 
+mixins = require('postcss-mixins');
 
 /* function swallowError (error){
     console.log(error.toString());
@@ -21,7 +22,7 @@ gulp.task('styles', function(){
 gulp.task('styles', function(){
     console.log('processing post css tasks');
     return gulp.src('./app/assets/styles/styles.css')
-    .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
+    .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
     .on('error', function(errorInfo){
         console.log(errorInfo.toString());
         this.emit('end');
