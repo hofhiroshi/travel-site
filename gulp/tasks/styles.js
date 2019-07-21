@@ -5,10 +5,29 @@ cssvars = require('postcss-simple-vars'),
 nested = require('postcss-nested'), 
 cssImport = require('postcss-import');
 
+/* function swallowError (error){
+    console.log(error.toString());
+    this.emit('end');
+}
 
 gulp.task('styles', function(){
     console.log('processing post css tasks');
     return gulp.src('./app/assets/styles/styles.css')
     .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
+    .on('error', swallowError)
+    .pipe(gulp.dest('./app/temp/styles'));
+}); */
+
+gulp.task('styles', function(){
+    console.log('processing post css tasks');
+    return gulp.src('./app/assets/styles/styles.css')
+    .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
+    .on('error', function(errorInfo){
+        console.log(errorInfo.toString());
+        this.emit('end');
+    })
     .pipe(gulp.dest('./app/temp/styles'));
 });
+
+
+
