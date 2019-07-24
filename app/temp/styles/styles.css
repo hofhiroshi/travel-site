@@ -554,6 +554,7 @@ img {
     }
 
 .wrapper {
+    background-color: green;
     overflow:hidden; 
     padding-left: 18px;
     padding-right: 18px;
@@ -634,6 +635,11 @@ img {
         margin-bottom: 1.6em;
     }
 
+.row {
+    background-color: yellow;
+
+}
+
 .row::after{
         content: "";
         clear: both;
@@ -648,12 +654,15 @@ img {
         padding-right: 65px;
     }
 
-.row__4 {
-        float: left;
-        width: 33.33%
-    }
+@media (min-width: 800px){
 
-.row__8 {
-        float: left;
-        width: 66.66%
+        .row__medium-4 {
+            float: left;
+            width: 33.33%
+        }
+    
+        .row__medium-8 {
+            float: left;
+            width: 66.66%
+        }
     }
