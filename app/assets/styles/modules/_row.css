@@ -2,6 +2,11 @@
     background-color: yellow;
     @mixin clearfix; 
 
+    &--gutters > div {
+        padding-right: 65px;
+        box-sizing: border-box;
+    }
+
     &__4 {
         float: left;
         width: 33.33%
