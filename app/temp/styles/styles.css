@@ -657,7 +657,11 @@ img {
     } */
 }
 
-/* @mixin clearfix; */
+.row::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
 
 .row__4 {
         float: left;

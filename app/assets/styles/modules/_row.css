@@ -1,6 +1,6 @@
 .row {
     background-color: yellow;
-    /* @mixin clearfix; */
+    @mixin clearfix; 
 
     &__4 {
         float: left;
