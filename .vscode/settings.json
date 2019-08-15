@@ -1,0 +1,9 @@
+
+
+// https://www.udemy.com/git-a-web-developer-job-mastering-the-modern-workflow/learn/lecture/5500604#questions/3831988
+// https://code.visualstudio.com/docs/languages/overview
+{
+    "files.associations": {
+        "*.css": "postcss"
+      }
+}
